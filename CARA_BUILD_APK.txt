@@ -1,0 +1,31 @@
+========================================================================
+PROJECT APK EXAMBRO ASSAH — SMK AL-HIKMAH CURUG (0 IKLAN, ANTI SCREENSHOT)
+========================================================================
+
+1. GANTI LOGO SEKOLAH ASLI:
+   Timpa file gambar berikut dengan logo resmi SMK Al-Hikmah Curug (format PNG transparan):
+   - app/src/main/res/drawable/logo_sekolah.png
+   - app/src/main/res/mipmap-hdpi/ic_launcher.png & ic_launcher_round.png (72x72 px)
+   - app/src/main/res/mipmap-xhdpi/ic_launcher.png & ic_launcher_round.png (96x96 px)
+   - app/src/main/res/mipmap-xxhdpi/ic_launcher.png & ic_launcher_round.png (144x144 px)
+   - app/src/main/res/mipmap-xxxhdpi/ic_launcher.png & ic_launcher_round.png (192x192 px)
+
+2. UBAH ALAMAT URL DEFAULT (SAAT SUDAH NAIK HOSTING):
+   Buka file: app/src/main/java/id/sch/smkalhikmah/exambro/MainActivity.java
+   Ubah baris DEFAULT_EXAM_URL menjadi:
+     private static final String DEFAULT_EXAM_URL = "https://domainsekolah.sch.id/master/app";
+   (Untuk uji coba lokal saat ini sudah diisi http://192.168.1.5/master/app, dan bisa
+    diganti langsung dari dalam APK dengan mengetuk LOGO di pojok kiri atas 5x lalu PIN: 2026)
+
+3. CARA BUILD JADI FILE .APK:
+   - OPSI A (TANPA ANDROID STUDIO - ONLINE GRATIS VIA GITHUB):
+     a. Buat repository baru di GitHub.com (bisa Private).
+     b. Upload seluruh isi folder ZIP ini ke repository tersebut (pastikan folder .github ikut terunggah).
+     c. Buka tab "Actions" -> pilih "Build Exambro ASSAH APK" -> klik "Run workflow".
+     d. Tunggu ±2 menit hingga centang hijau -> unduh file APK pada bagian "Artifacts".
+
+   - OPSI B (PAKAI ANDROID STUDIO DI LAPTOP):
+     a. Ekstrak file ZIP ini ke folder komputer Anda.
+     b. Buka Android Studio -> Open -> pilih folder hasil ekstrak.
+     c. Tunggu Gradle Sync selesai -> klik menu Build -> Build Bundle(s) / APK(s) -> Build APK(s).
+     d. File APK jadi ada di: app/build/outputs/apk/debug/app-debug.apk
